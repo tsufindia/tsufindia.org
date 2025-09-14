@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sarvatra Urja Foundation - Empowering Communities Through Change</title>
+    <meta name="description" content="Supporting rural empowerment, women equality, child welfare, environmental conservation, and community development across India. Join our mission for lasting social change.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Sarvatra Urja Foundation - Empowering Communities">
+    <meta property="og:description" content="Supporting rural empowerment, women equality, child welfare, environmental conservation, and community development across India.">
+    <meta property="og:url" content="https://tsufindia.github.io/sarvatra-urja-foundation-website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(25, 85%, 55%)',
+                            foreground: 'hsl(0, 0%, 98%)'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(140, 60%, 35%)',
+                            foreground: 'hsl(0, 0%, 98%)'
+                        },
+                        background: 'hsl(0, 0%, 100%)',
+                        foreground: 'hsl(220, 65%, 25%)',
+                        card: {
+                            DEFAULT: 'hsl(0, 0%, 100%)',
+                            foreground: 'hsl(220, 65%, 25%)'
+                        },
+                        border: 'hsl(220, 13%, 91%)',
+                        muted: {
+                            DEFAULT: 'hsl(220, 14%, 96%)',
+                            foreground: 'hsl(220, 10%, 40%)'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-background text-foreground">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo.jpg" alt="The Sarvatra Urja Foundation Logo" class="h-10 w-10 rounded-full object-cover">
+                    <div>
+                        <h1 class="text-lg font-bold text-foreground">The Sarvatra Urja Foundation</h1>
+                        <p class="text-xs text-muted-foreground">Empowering Communities</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#mission" class="text-muted-foreground hover:text-foreground transition-colors">Our Mission</a>
+                    <a href="#gallery" class="text-muted-foreground hover:text-foreground transition-colors">Gallery</a>
+                    <a href="#donate" class="text-muted-foreground hover:text-foreground transition-colors">Donate</a>
+                    <a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+                    <a href="#contact" class="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
+                        Partner With Us
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2" data-testid="button-mobile-menu">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col gap-2">
+                    <a href="#mission" class="text-muted-foreground hover:text-foreground transition-colors py-2">Our Mission</a>
+                    <a href="#gallery" class="text-muted-foreground hover:text-foreground transition-colors py-2">Gallery</a>
+                    <a href="#donate" class="text-muted-foreground hover:text-foreground transition-colors py-2">Donate</a>
+                    <a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors py-2">Contact</a>
+                    <a href="#contact" class="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors text-center mt-2">
+                        Partner With Us
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('assets/hero-bg.png')">
+            <!-- Dark overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+            
+            <div class="relative z-10 container mx-auto px-4 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <span class="inline-block px-4 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-primary-foreground text-sm font-medium mb-6">
+                        Empowering Communities Across India
+                    </span>
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                        Building a Better Tomorrow Through
+                        <span class="text-primary">Collective Action</span>
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                        Supporting rural empowerment, women's equality, child welfare, environmental conservation, 
+                        and community development across India. Together, we create lasting change.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#donate" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors" data-testid="button-hero-donate">
+                            Support Our Mission
+                        </a>
+                        <a href="#contact" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-colors" data-testid="button-hero-partner">
+                            Partner With Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="py-16 bg-background">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                        Our Mission Areas
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                        Creating Impact Across
+                        <span class="text-primary">Multiple Domains</span>
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        We work across diverse areas to address the interconnected challenges facing communities,
+                        ensuring comprehensive support and sustainable development.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Environment/Energy/Climate Action -->
+                    <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-accent/10 rounded-lg mb-4">
+                            <i data-lucide="leaf" class="h-6 w-6 text-accent"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">Environment & Climate Action</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Protecting our planet through sustainable practices, renewable energy initiatives, 
+                            and climate change mitigation programs.
+                        </p>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Clean energy projects
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Waste management programs
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Environmental education
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Development/Justice -->
+                    <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                            <i data-lucide="users" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">Social Development & Justice</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Promoting equality, human rights, and social justice through community empowerment 
+                            and advocacy programs.
+                        </p>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Community organizing
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Rights advocacy
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Social awareness campaigns
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Health/Care/Well-being -->
+                    <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-accent/10 rounded-lg mb-4">
+                            <i data-lucide="heart" class="h-6 w-6 text-accent"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">Health & Well-being</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Ensuring access to quality healthcare, mental health support, and wellness programs 
+                            for all community members.
+                        </p>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Healthcare access
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Mental health support
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Nutrition programs
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Culture/Music/Heritage -->
+                    <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                            <i data-lucide="music" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">Culture & Heritage</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Preserving and promoting cultural heritage, traditional arts, music, and local crafts 
+                            to maintain community identity.
+                        </p>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Cultural preservation
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Arts & crafts training
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Heritage documentation
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Animal Welfare -->
+                    <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-accent/10 rounded-lg mb-4">
+                            <i data-lucide="paw-print" class="h-6 w-6 text-accent"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">Animal Welfare</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Protecting and caring for animals through rescue operations, veterinary care, 
+                            and awareness programs about animal rights.
+                        </p>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Animal rescue & care
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Veterinary services
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-accent"></i>
+                                Animal rights advocacy
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Women Empowerment & Rural Development -->
+                    <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">Women Empowerment & Rural Development</h3>
+                        <p class="text-muted-foreground mb-4">
+                            Empowering women and rural communities through education, skill development, 
+                            and economic opportunities for sustainable growth.
+                        </p>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Skills training programs
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Microfinance initiatives
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="h-4 w-4 text-primary"></i>
+                                Leadership development
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 bg-muted">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                        Our Impact Gallery
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                        Stories of <span class="text-primary">Transformation</span>
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Witness the positive change happening in communities across India through our various programs and initiatives.
+                    </p>
+                </div>
+
+                <!-- Gallery Filters -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="gallery-filter active bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium" data-filter="all">
+                        All Programs
+                    </button>
+                    <button class="gallery-filter bg-card border border-border text-card-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-muted transition-colors" data-filter="education">
+                        Education
+                    </button>
+                    <button class="gallery-filter bg-card border border-border text-card-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-muted transition-colors" data-filter="environment">
+                        Environment
+                    </button>
+                    <button class="gallery-filter bg-card border border-border text-card-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-muted transition-colors" data-filter="women">
+                        Women Empowerment
+                    </button>
+                    <button class="gallery-filter bg-card border border-border text-card-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-muted transition-colors" data-filter="health">
+                        Healthcare
+                    </button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Placeholder gallery items - replace with actual images -->
+                    <div class="gallery-item bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow" data-category="education">
+                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <i data-lucide="book-open" class="h-12 w-12 text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-card-foreground mb-2">Education Initiative</h3>
+                            <p class="text-sm text-muted-foreground">Providing quality education and learning resources to rural children.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow" data-category="environment">
+                        <div class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+                            <i data-lucide="trees" class="h-12 w-12 text-accent"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-card-foreground mb-2">Tree Plantation Drive</h3>
+                            <p class="text-sm text-muted-foreground">Community-led environmental conservation and reforestation efforts.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow" data-category="women">
+                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <i data-lucide="users" class="h-12 w-12 text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-card-foreground mb-2">Women's Skills Training</h3>
+                            <p class="text-sm text-muted-foreground">Empowering women through vocational training and skill development.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow" data-category="health">
+                        <div class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+                            <i data-lucide="heart" class="h-12 w-12 text-accent"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-card-foreground mb-2">Healthcare Camp</h3>
+                            <p class="text-sm text-muted-foreground">Free medical checkups and healthcare services for rural communities.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow" data-category="education">
+                        <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <i data-lucide="graduation-cap" class="h-12 w-12 text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-card-foreground mb-2">Digital Literacy Program</h3>
+                            <p class="text-sm text-muted-foreground">Teaching digital skills and computer literacy to rural youth.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow" data-category="environment">
+                        <div class="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+                            <i data-lucide="recycle" class="h-12 w-12 text-accent"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-card-foreground mb-2">Waste Management</h3>
+                            <p class="text-sm text-muted-foreground">Community-based waste segregation and recycling programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Section -->
+        <section id="donate" class="py-16 bg-background">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                        Support Our Mission
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                        Make a <span class="text-primary">Lasting Difference</span>
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Your donation directly supports our programs in rural empowerment, women's equality, 
+                        child welfare, environmental conservation, and community development.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Donation Form -->
+                        <div class="bg-card border border-border rounded-lg p-6">
+                            <h3 class="text-xl font-semibold text-card-foreground mb-4">Choose Your Donation</h3>
+                            
+                            <!-- Amount Selection -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-card-foreground mb-3">Donation Amount</label>
+                                <div class="grid grid-cols-2 gap-3 mb-4">
+                                    <button class="donation-amount border border-border rounded-lg p-3 text-center hover:border-primary hover:bg-primary/5 transition-colors" data-amount="500">
+                                        <div class="font-semibold">₹500</div>
+                                        <div class="text-xs text-muted-foreground">Support basic needs</div>
+                                    </button>
+                                    <button class="donation-amount border border-border rounded-lg p-3 text-center hover:border-primary hover:bg-primary/5 transition-colors" data-amount="1000">
+                                        <div class="font-semibold">₹1,000</div>
+                                        <div class="text-xs text-muted-foreground">Fund a program</div>
+                                    </button>
+                                    <button class="donation-amount border border-border rounded-lg p-3 text-center hover:border-primary hover:bg-primary/5 transition-colors" data-amount="2500">
+                                        <div class="font-semibold">₹2,500</div>
+                                        <div class="text-xs text-muted-foreground">Sponsor a family</div>
+                                    </button>
+                                    <button class="donation-amount border border-border rounded-lg p-3 text-center hover:border-primary hover:bg-primary/5 transition-colors" data-amount="5000">
+                                        <div class="font-semibold">₹5,000</div>
+                                        <div class="text-xs text-muted-foreground">Major impact</div>
+                                    </button>
+                                </div>
+                                
+                                <div class="flex items-center gap-2">
+                                    <span class="text-muted-foreground">₹</span>
+                                    <input type="number" id="custom-amount" placeholder="Enter custom amount" class="flex-1 px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                            </div>
+
+                            <!-- Donor Information -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-card-foreground mb-3">Your Information</label>
+                                <div class="space-y-4">
+                                    <input type="text" id="donor-name" placeholder="Full Name" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <input type="email" id="donor-email" placeholder="Email Address" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <input type="tel" id="donor-phone" placeholder="Phone Number (Optional)" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                            </div>
+
+                            <!-- Donation Category -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-card-foreground mb-3">Choose Impact Area</label>
+                                <select id="donation-category" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">Select a program area</option>
+                                    <option value="emergency">Emergency Relief</option>
+                                    <option value="education">Education & Skill Development</option>
+                                    <option value="environment">Environmental Conservation</option>
+                                    <option value="health">Healthcare Initiatives</option>
+                                    <option value="women">Women Empowerment</option>
+                                    <option value="children">Child Welfare</option>
+                                    <option value="general">General Fund</option>
+                                </select>
+                            </div>
+
+                            <!-- Payment Options -->
+                            <div class="space-y-4">
+                                <!-- India Payment Options -->
+                                <div class="border border-border rounded-lg p-4">
+                                    <h4 class="font-medium text-card-foreground mb-3 flex items-center gap-2">
+                                        <i data-lucide="flag" class="h-4 w-4"></i>
+                                        For Indian Donors
+                                    </h4>
+                                    <button id="donate-india" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors" data-testid="button-donate-india">
+                                        Donate via UPI/Cards/NetBanking
+                                    </button>
+                                </div>
+
+                                <!-- International Payment Options -->
+                                <div class="border border-border rounded-lg p-4">
+                                    <h4 class="font-medium text-card-foreground mb-3 flex items-center gap-2">
+                                        <i data-lucide="globe" class="h-4 w-4"></i>
+                                        For International Donors
+                                    </h4>
+                                    <button id="donate-international" class="w-full bg-primary text-primary-foreground py-3 rounded-md hover:bg-primary/90 transition-colors mb-2" data-testid="button-donate-international">
+                                        Donate via PayPal
+                                    </button>
+                                    <button id="contact-donation" class="w-full bg-card border border-border text-card-foreground py-3 rounded-md hover:bg-muted transition-colors" data-testid="button-contact-donation">
+                                        <i data-lucide="mail" class="inline h-4 w-4 mr-2"></i>
+                                        Contact for Other Options
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Impact Information -->
+                        <div class="space-y-6">
+                            <div class="bg-accent/10 border border-accent/20 rounded-lg p-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="shield-check" class="h-6 w-6 text-accent mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-card-foreground mb-2">Secure & Transparent</h4>
+                                        <p class="text-sm text-muted-foreground">
+                                            All donations are processed securely. We provide donation receipts and regular 
+                                            impact reports showing how your contribution creates lasting change.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-4">
+                                <div class="bg-card border border-border rounded-lg p-4 text-center">
+                                    <i data-lucide="users" class="h-8 w-8 text-primary mx-auto mb-2"></i>
+                                    <h4 class="font-semibold text-card-foreground">Direct Impact</h4>
+                                    <p class="text-sm text-muted-foreground">Your donation directly reaches communities and beneficiaries</p>
+                                </div>
+
+                                <div class="bg-card border border-border rounded-lg p-4 text-center">
+                                    <i data-lucide="heart" class="h-8 w-8 text-accent mx-auto mb-2"></i>
+                                    <h4 class="font-semibold text-card-foreground">Multiple Areas</h4>
+                                    <p class="text-sm text-muted-foreground">Support environment, health, education, and social development</p>
+                                </div>
+
+                                <div class="bg-card border border-border rounded-lg p-4 text-center">
+                                    <i data-lucide="file-text" class="h-8 w-8 text-primary mx-auto mb-2"></i>
+                                    <h4 class="font-semibold text-card-foreground">Full Transparency</h4>
+                                    <p class="text-sm text-muted-foreground">Regular updates and reports on how your donation creates change</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-muted">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                        Get In Touch
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                        Ready to <span class="text-primary">Partner With Us?</span>
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Whether you want to volunteer, partner with us, or learn more about our programs, 
+                        we'd love to hear from you.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <!-- Contact Information -->
+                    <div class="text-center mb-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="flex flex-col items-center p-4 bg-card border border-border rounded-lg">
+                                <i data-lucide="mail" class="h-6 w-6 text-primary mb-2"></i>
+                                <p class="font-medium">Email</p>
+                                <p class="text-sm text-muted-foreground">tsufindia@gmail.com</p>
+                            </div>
+                            <div class="flex flex-col items-center p-4 bg-card border border-border rounded-lg">
+                                <i data-lucide="phone" class="h-6 w-6 text-primary mb-2"></i>
+                                <p class="font-medium">Phone</p>
+                                <p class="text-sm text-muted-foreground">Contact us for details</p>
+                            </div>
+                            <div class="flex flex-col items-center p-4 bg-card border border-border rounded-lg">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-primary mb-2"></i>
+                                <p class="font-medium">Location</p>
+                                <p class="text-sm text-muted-foreground">Across India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Forms -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Partnership Form -->
+                        <div class="bg-card border border-border rounded-lg p-6">
+                            <h3 class="text-xl font-semibold text-card-foreground mb-4">Partnership Inquiry</h3>
+                            <form id="partnership-form">
+                                <div class="space-y-4">
+                                    <input type="text" name="name" placeholder="Organization/Your Name" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                    <input type="email" name="email" placeholder="Email Address" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                    <select name="partnership-type" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                        <option value="">Partnership Type</option>
+                                        <option value="corporate">Corporate Partnership</option>
+                                        <option value="ngo">NGO Collaboration</option>
+                                        <option value="volunteer">Volunteer Opportunity</option>
+                                        <option value="sponsor">Event Sponsorship</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <textarea name="message" placeholder="Tell us about your partnership idea or how you'd like to get involved..." rows="4" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                                    <button type="submit" class="w-full bg-primary text-primary-foreground py-3 rounded-md hover:bg-primary/90 transition-colors" data-testid="button-partnership-submit">
+                                        Send Partnership Inquiry
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- General Contact Form -->
+                        <div class="bg-card border border-border rounded-lg p-6">
+                            <h3 class="text-xl font-semibold text-card-foreground mb-4">General Inquiry</h3>
+                            <form id="contact-form">
+                                <div class="space-y-4">
+                                    <input type="text" name="name" placeholder="Your Name" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                    <input type="email" name="email" placeholder="Email Address" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                    <input type="text" name="subject" placeholder="Subject" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                    <textarea name="message" placeholder="Your message..." rows="4" class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                                    <button type="submit" class="w-full bg-accent text-accent-foreground py-3 rounded-md hover:bg-accent/90 transition-colors" data-testid="button-contact-submit">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-foreground text-background py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Organization Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/logo.jpg" alt="The Sarvatra Urja Foundation Logo" class="h-12 w-12 rounded-full object-cover">
+                        <div>
+                            <h3 class="text-lg font-bold">The Sarvatra Urja Foundation</h3>
+                            <p class="text-sm text-background/80">Empowering Communities Through Change</p>
+                        </div>
+                    </div>
+                    <p class="text-background/80 mb-4 max-w-md">
+                        Dedicated to creating lasting positive change in rural communities through 
+                        comprehensive programs in education, healthcare, environment, and social development.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2">
+                            <i data-lucide="mail" class="h-4 w-4 text-primary mt-1 flex-shrink-0"></i>
+                            <div>
+                                <p class="text-sm text-background">tsufindia@gmail.com</p>
+                                <p class="text-xs text-background/60">General Inquiries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#mission" class="text-background/80 hover:text-background transition-colors">Our Mission</a></li>
+                        <li><a href="#gallery" class="text-background/80 hover:text-background transition-colors">Gallery</a></li>
+                        <li><a href="#donate" class="text-background/80 hover:text-background transition-colors">Donate</a></li>
+                        <li><a href="#contact" class="text-background/80 hover:text-background transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mission Areas -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Mission Areas</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><span class="text-background/80">Environment & Climate</span></li>
+                        <li><span class="text-background/80">Social Development</span></li>
+                        <li><span class="text-background/80">Healthcare & Wellbeing</span></li>
+                        <li><span class="text-background/80">Women Empowerment</span></li>
+                        <li><span class="text-background/80">Animal Welfare</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-background/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-background/60">
+                        © 2024 The Sarvatra Urja Foundation. All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-sm text-background/60">Follow us:</span>
+                        <!-- Social media links would go here -->
+                        <div class="flex gap-2">
+                            <a href="#" class="text-background/60 hover:text-background transition-colors">
+                                <i data-lucide="facebook" class="h-5 w-5"></i>
+                            </a>
+                            <a href="#" class="text-background/60 hover:text-background transition-colors">
+                                <i data-lucide="twitter" class="h-5 w-5"></i>
+                            </a>
+                            <a href="#" class="text-background/60 hover:text-background transition-colors">
+                                <i data-lucide="instagram" class="h-5 w-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

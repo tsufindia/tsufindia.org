@@ -1,0 +1,135 @@
+/* Custom styles for The Sarvatra Urja Foundation website */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom hover effects */
+.hover-elevate:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Active state for gallery filters */
+.gallery-filter.active {
+    background-color: hsl(25, 85%, 55%);
+    color: hsl(0, 0%, 98%);
+}
+
+/* Donation amount selection states */
+.donation-amount.selected {
+    border-color: hsl(25, 85%, 55%);
+    background-color: hsl(25, 85%, 55%, 0.05);
+}
+
+/* Gallery item transitions */
+.gallery-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-item.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    display: none;
+}
+
+/* Form focus states */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: hsl(25, 85%, 55%);
+    border-color: transparent;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+#mobile-menu.show {
+    max-height: 300px;
+}
+
+/* Background overlay for hero */
+.hero-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+/* PayPal button styling */
+#paypal-button-container {
+    margin-top: 1rem;
+}
+
+/* Success/error message styling */
+.message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.message.success {
+    background-color: hsl(140, 60%, 35%, 0.1);
+    border: 1px solid hsl(140, 60%, 35%, 0.3);
+    color: hsl(140, 60%, 35%);
+}
+
+.message.error {
+    background-color: hsl(0, 70%, 50%, 0.1);
+    border: 1px solid hsl(0, 70%, 50%, 0.3);
+    color: hsl(0, 70%, 50%);
+}
+
+/* Loading spinner */
+.spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid hsl(25, 85%, 55%);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.125rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+}
